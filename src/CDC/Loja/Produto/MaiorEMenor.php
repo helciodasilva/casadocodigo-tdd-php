@@ -14,10 +14,10 @@ class MaiorEMenor
     {
         foreach ($carrinho->getProdutos() as $produto) {
 
-            if (empty($this->menor) || $produto->getValor() < $this->menor->getValor()) {
+            if (empty($this->menor) || $produto->getvalorUnitario() < $this->menor->getvalorUnitario()) {
                 $this->menor = $produto;
             }
-            if (empty($this->maior) || $produto->getValor() > $this->maior->getValor()) {
+            if (empty($this->maior) || $produto->getvalorUnitario() > $this->maior->getvalorUnitario()) {
                 $this->maior = $produto;
             }
         }

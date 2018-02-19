@@ -6,12 +6,14 @@ class Produto
 {        
     
     private$nome;
-    private $valor;
+    private $valorUnitario;
+    private $quantidade;
 
-    public function __construct($nome, $valor)
+    public function __construct($nome, $valorUnitario, $quantidade = 1)
     {
         $this->nome = $nome;
-        $this->valor = $valor;
+        $this->valorUnitario = $valorUnitario;
+        $this->quantidade = $quantidade;
     }
 
     function getNome()
@@ -19,9 +21,19 @@ class Produto
         return $this->nome;
     }
 
-    function getValor()
+    function getvalorUnitario()
     {
-        return $this->valor;
+        return $this->valorUnitario;
+    }
+
+    function getQuantidade()
+    {
+        return $this->quantidade;
+    }
+
+    function getvalorTotal()
+    {
+        return $this->valorUnitario * $this->quantidade;
     }
 
 }
